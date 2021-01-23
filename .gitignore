@@ -1,0 +1,10 @@
+venv/
+
+**/.DS_Store
+
+*.swp
+
+*.pyc
+**/__pycache__/
+
+instance/

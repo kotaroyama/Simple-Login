@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="login-page">
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class="w3-panel w3-red">
+      <h3>Warning:</h3>
+        <ul class=flashes>
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  {% endwith %}
+  <div class="form">
+    <form class="login-form" action="login" method="POST">
+      <input type="text" placeholder="username" name="username" />
+      <input type="password" placeholder="password" name="password" />
+      <button type="Submit">Login</button>
+      <p class="message">Not registered? <a href="/register">Create an account</a></p>
+    </form>
+  </div>
+</div> 
+{% endblock %}

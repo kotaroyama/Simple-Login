@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="login-page">
+  <div class="form">
+    <h3 id="welcome-message">Welcome, {{ user.username }}</h3>
+    <form action="logout" method="GET">
+      <button type="submit">Logout</button>
+    </form>
+  </div>
+</div> 
+{% endblock %}
+
